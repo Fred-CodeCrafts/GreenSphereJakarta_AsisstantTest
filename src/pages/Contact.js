@@ -2,12 +2,11 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const whatsappMessage = `Hello, my name is ${name}. My email is ${email}. Here's my message: ${message}`;
+    const whatsappMessage = `Hello, my name is ${name}. Here's my message: ${message}`;
     const whatsappURL = `https://wa.me/085288948880?text=${encodeURIComponent(
       whatsappMessage
     )}`;
